@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>noviproxy</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <img src="icons/icon48.png" alt="" width="26" height="26">
+      <span class="brand-name" dir="ltr">noviproxy</span>
+    </div>
+    <span class="chip" dir="ltr">SOCKS5</span>
+  </header>
+
+  <main>
+    <section class="hero" data-state="off" id="hero">
+      <button id="power" class="power" type="button" aria-pressed="false" aria-label="اتصال یا قطع پروکسی">
+        <span class="power-ring"></span>
+        <span class="power-core">
+          <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3v8"/>
+            <path d="M6.4 6.6a8 8 0 1 0 11.2 0"/>
+          </svg>
+        </span>
+      </button>
+      <h1 id="statusTitle">قطع است</h1>
+      <p id="statusSub">یک سرور انتخاب کن و دکمه را بزن</p>
+      <p id="warn" class="warn" hidden></p>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>سرورها</h2>
+        <button id="addBtn" class="link" type="button">سرور جدید</button>
+      </div>
+      <ul id="list" class="list"></ul>
+      <p id="empty" class="empty" hidden>هنوز سروری ذخیره نکرده‌ای. آدرس و پورت SOCKS5 را در فرم پایین وارد کن.</p>
+    </section>
+
+    <section class="card" id="formCard" hidden>
+      <div class="card-head">
+        <h2 id="formTitle">سرور جدید</h2>
+        <button id="cancelBtn" class="link" type="button">بستن</button>
+      </div>
+      <div class="field">
+        <label for="name">نام</label>
+        <input id="name" type="text" placeholder="مثلاً سرور آلمان" autocomplete="off">
+      </div>
+      <div class="row">
+        <div class="field grow">
+          <label for="host">آدرس سرور</label>
+          <input id="host" type="text" dir="ltr" placeholder="1.2.3.4 یا host:port" autocomplete="off" spellcheck="false">
+        </div>
+        <div class="field port">
+          <label for="port">پورت</label>
+          <input id="port" type="text" inputmode="numeric" dir="ltr" placeholder="1080" autocomplete="off">
+        </div>
+      </div>
+      <p id="formError" class="error" hidden></p>
+      <button id="saveBtn" class="primary" type="button">ذخیره سرور</button>
+    </section>
+
+    <details class="card adv">
+      <summary>تنظیمات پیشرفته</summary>
+      <div class="field">
+        <label for="bypass">آدرس‌هایی که بدون پروکسی باز شوند (هر خط یکی)</label>
+        <textarea id="bypass" rows="4" dir="ltr" spellcheck="false"></textarea>
+      </div>
+      <button id="saveBypass" class="ghost" type="button">ذخیره لیست</button>
+    </details>
+  </main>
+
+  <footer class="foot">
+    <button id="ipBtn" class="ghost" type="button">نمایش IP فعلی</button>
+    <span id="ipOut" class="ip" dir="ltr"></span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
