@@ -25,3 +25,5 @@ MIT
 
 ## سازنده / Author
 [RealSiavashYT](https://github.com/RealSiavashYT)
+
+<img width="340" height="504" alt="Screenshot 2026-10-16 004819" src="https://github.com/user-attachments/assets/3722394c-787d-4957-ac1f-93492224eb79" />
