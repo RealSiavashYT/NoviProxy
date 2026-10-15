@@ -15,6 +15,7 @@ A tiny Chrome extension (Manifest V3) to set a SOCKS5 proxy manually with one cl
 1. این مخزن را دانلود یا clone کن.
 2. در کروم برو به `chrome://extensions` و **Developer mode** را روشن کن.
 3. **Load unpacked** را بزن و پوشه‌ی پروژه را انتخاب کن.
+<img width="340" height="504" alt="Screenshot 2026-10-16 004819" src="https://github.com/user-attachments/assets/3722394c-787d-4957-ac1f-93492224eb79" />
 
 ## محدودیت‌ها / Limitations
 - کروم از نام کاربری و رمز عبور برای SOCKS5 پشتیبانی نمی‌کند. فقط سرورهای بدون احراز هویت کار می‌کنند (یا از یک پراکسی محلی مثل `127.0.0.1:10808` استفاده کن).
@@ -25,5 +26,3 @@ MIT
 
 ## سازنده / Author
 [RealSiavashYT](https://github.com/RealSiavashYT)
-
-<img width="340" height="504" alt="Screenshot 2026-10-16 004819" src="https://github.com/user-attachments/assets/3722394c-787d-4957-ac1f-93492224eb79" />
